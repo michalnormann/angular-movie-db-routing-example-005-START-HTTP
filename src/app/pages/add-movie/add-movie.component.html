@@ -1,0 +1,20 @@
+<!-- <div class="grid">
+  <form class="container" #movieForm="ngForm">
+    <input placeholder="Title" type="text" name="title"/>
+    <button (click)="send(movieForm)">Send</button>
+  </form>
+</div> -->
+
+<div class="grid">
+  <form class="container" #movieForm="ngForm" (ngSubmit)="onSubmit(movieForm.value)">
+    <input placeholder="Title" type="text" name="title" ngModel />
+    <input placeholder="Year" type="text" name="year" ngModel />
+    <input placeholder="Category" type="text" name="category" ngModel />
+    <input placeholder="Director" type="text" name="director" ngModel />
+    <input placeholder="Plot" type="text" name="plot" ngModel />
+    <input placeholder="Poster (URL)" type="text" name="poster" ngModel />
+    <input placeholder="Country" type="text" name="country" ngModel />
+    <input placeholder="imbd Rating" type="text" name="imdbRating" ngModel />
+    <button class="btn green" type="submit">Send</button>
+  </form>
+</div>
